@@ -2,7 +2,7 @@
     --primary-color:#C5A028;
     --havor-color : #E0C75B ; 
     --secondry-bg-color : #2E8A3A ;
-    --bg-color: #1E6A25 ;
+    --bg-color: #003a06 ;
     --text-color: #FFFFFF;
     --secondry-text-color : #000000 ; 
     --card-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -29,23 +29,28 @@ body {
 }
 
 
-
-
-.primary-btn {
-  position: relative;
-  overflow: hidden;
+.container{ 
+  padding : 10px 20px  ; 
 }
 
-.primary-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+}
+
+.card-btn i{
+  margin: 0; /* spacing handled by gap */
+}
     rgba(255,255,255,0.6),
     transparent
   );
@@ -76,10 +81,6 @@ body {
 .preview-section {
   animation: fadeUp 1s ease forwards;
 }
-
-
-
-
 
 
 .stars{
@@ -139,19 +140,31 @@ body {
     opacity: 1;
   }
 }
-header {
+
+
+.moon {
+  display: fixd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+
+.header-content {
     position: relative; /* مهم */
     align-items: center;
     text-align: center;
     justify-content: center;
-    display: flex;
+    display: block;
     background: url("../assets/img/head_bg.png") no-repeat center/cover;
     padding: 40px 20px;
     overflow: hidden;
 }
 
 /* طبقة التغطية */
-header::before {
+.header-content::before {
   content: "";
   position: absolute;
   inset: 0; /* بدل width/height/top/left */
@@ -163,7 +176,7 @@ header::before {
 }
 
 /* خلي المحتوى فوق الطبقة */
-header * {
+.header-content * {
   position: relative;
   z-index: 2;
 }
@@ -175,6 +188,8 @@ header * {
   display : flex ; 
   justify-content: center;
   align-items: center;
+  background-color :rgb(10, 41, 13);
+  padding: 30px;
 }
 
 .shamir-logo img{
@@ -183,13 +198,159 @@ header * {
   margin-left : 20px ; 
 }
 
-header h2 span {
+.shamir-logo h1  {
   color: var(--primary-color);
+}
+
+
+.lantern {
+  width: 200px; 
+  position: absolute;
+  top: 0 ; 
+  opacity: 50%;
+   
+}
+
+.lantern:first-child{
+  left: 150px ; 
+}
+
+.lantern:nth-child(2) {
+  right: 150px;
+  
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
+}
+
+.pngtree-ramadan {
+  position : absolute ; 
+  width : 500px ; 
+  top : 0 ;
+  opacity: 20%; 
+  z-index: -1;
+}
+.pngtree-ramadan:first-child{
+  right: 0; 
+}
+
+.pngtree-ramadan:nth-child(2){
+  left: 0px;
+
+}
+
+
+
+
+
+
+/* Info cards section */
+.info-cards-section {
+  padding: 20px 16px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+
+.info-card .pngtree {
+  position: relative;
+  width : 40px ; 
+  top : -18px ; 
+}
+
+
+
+
+
+.info-card {
+  background: #2e8a3a6e;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  color: var(--secondry-text-color);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon svg { width: 28px; height: 28px; display:block; }
+
+#whats-icon { color: #25D366;  font-size :30px; }
+#chat-icon { color: #ffffff;  font-size :25px; }
+#mobile-icon { color: var(--primary-color); font-size :30px; }
+#call-icon { color: #0b6ef0; font-size :20px;}
+#globe-icon { color: #0b6ef0; font-size :30px;}
+#client-icon { color:var(--primary-color); font-size :25px;}
+
+.info-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary-color);
+}
+
+.info-card p {
+  margin: 10px 0px 10px 0px;
+  color:var(--text-color);
+  font-size: 0.95rem;
+  text-align: center; 
+}
+
+.card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+}
+
+.card-btn i{
+  margin: 0; /* spacing handled by gap */
+}
+
+.card-btn.outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.card-btn.green {
+  background: #25D366;
+  margin-top: 10px; 
+}
+
+.btn-row {
+  display: block;
+  gap: 10px;
+  
 }
 
 .form-header {
@@ -216,10 +377,12 @@ header h2 span {
 }
 
 .selected-group {
-   margin-bottom: 15px;
-    display : flex ; 
-    justify-content: space-around;
-    margin: 30px 0px;
+    display: grid;
+    /* استخدام repeat مع auto-fit يجعل الشبكة مرنة تلقائياً */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    gap: 15px;
+    margin: 30px 0;
+    justify-items: center; /* لضمان توسيط البطاقات */
 }
 
 .input-group label {
@@ -236,16 +399,71 @@ input, select {
     font-size: 1rem;
 }
 
-.selected-group .card-select {
-  width : 80px ; 
-  height : 120px ; 
-  border-radius: 12px ; 
-  border: 2px solid #ddd;
-  overflow: hidden;
+/* خطأ التحقق من الإدخال */
+.error {
+  color: #ffdddd;
+  background: rgba(255,0,0,0.08);
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.input-error {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 0 3px rgba(255,77,79,0.08);
+}
+
+/* خطأ لتمييز بطاقة التصميم عند عدم الاختيار */
+.selected-group .card-select.input-error {
+  border-color: #ff4d4f !important;
+  box-shadow: 0 0 0 6px rgba(255,77,79,0.06);
+  transform: scale(1.02);
+}
+
+/* Progress overlay styles */
+.progress-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,8,2,0.6);
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex; 
-  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+.progress-card {
+  width: min(520px, 92%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  color: var(--text-color);
+  border: 1px solid rgba(197,160,40,0.12);
+}
+.progress-card h3 { margin: 0 0 12px 0; color: var(--primary-color); }
+.progress-bar { height: 12px; background: rgba(255,255,255,0.06); border-radius: 8px; overflow: hidden; margin: 14px 0; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #FFD56B, #C5A028); width: 0%; transition: width 600ms ease; }
+.progress-dots { display:flex; gap:8px; justify-content:center; margin-top:10px; }
+.progress-dots span { width:10px; height:10px; background: rgba(255,255,255,0.12); border-radius:50%; display:inline-block; animation: pulse 1.2s infinite; }
+.progress-dots span:nth-child(2){ animation-delay: 0.15s; }
+.progress-dots span:nth-child(3){ animation-delay: 0.3s; }
+@keyframes pulse { 0%{transform:scale(1); opacity:0.35}50%{transform:scale(1.5); opacity:1}100%{transform:scale(1); opacity:0.35} }
+.progress-sub { margin-top:10px; font-size:0.95rem; color: rgba(255,255,255,0.75); }
+
+.selected-group .card-select {
+    width: 85px; 
+    height: 125px; 
+    border-radius: 12px; 
+    border: 2px solid #ddd;
+    overflow: hidden;
+    display: flex; 
+    margin-bottom: 20px ;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .selected-group .card-select:hover ,
@@ -299,14 +517,24 @@ input, select {
 }
 
 .name-overlay {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none; /* لمنع التداخل مع الضغط */
-    font-weight: bold;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-    white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  pointer-events: none;
+  display: inline-block;
+  max-width: 92%;
+  text-align: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: clamp(18px, 4.2vw, 48px);
+  line-height: 1.05;
+  padding: 8px 14px;
+  background: rgba(0,0,0,0.32);
+  border-radius: 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  word-break: break-word;
+  white-space: normal;
 }
 
 .actions {
@@ -327,13 +555,121 @@ input, select {
 
 .share-btn { background: #3498db; }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-    .container { max-width: 800px; }
-    .actions { flex-direction: row; }
+/* Footer styles */
+.footer {
+  background :rgb(10, 41, 13);
+  padding: 28px 16px;
+  color: var(--text-color);
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.footer-summary h4 {
+  margin: 0 0 8px 0;
+  color: var(--primary-color);
+  text-align: center ;
+}
+
+.footer-summary p { margin: 0 0 8px 0; color:var(--text-color); line-height: 1.5; text-align: center; }
+.footer-summary .muted { font-size: 0.9rem; color: var(--text-color);  text-align: center;}
+
+.footer-legal h5 { margin: 0 0 8px 0; color: var(--primary-color); text-align: center; }
+.footer-legal ul { list-style: none; padding: 0; margin: 0 0 12px 0; text-align: center; }
+.footer-legal li { margin-bottom: 8px; }
+.footer-legal a { color: var(--primary-color); text-decoration: none; font-weight: 600;  }
+
+.copyright p{ font-size: 0.9rem; color: var(--text-color); margin-top: 8px;  text-align: center;}
+
+.developer-info {
+  text-align: center;
 }
 
 
+
+
+
+
+/* Responsive adjustments */
+
+/* 1. الشاشات الصغيرة جداً (أقل من 400px) */
+@media (max-width: 400px) {
+    .selected-group {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .selected-group .card-select {
+        width: 70px;
+        height: 100px;
+    }
+
+    .selected-group .card-select img {
+      width : 100px;
+    }
+    .shamir-logo img { width: 40px; }
+    .shamir-logo h1 { font-size: 16px; }
+    .lantern { width: 80px; }
+    .lantern:first-child { left: 10px; }
+    .lantern:nth-child(2) { right: 10px; }
+    .pngtree-ramadan { width: 170px; }
+    .container { padding: 20px; }
+}
+
+/* 2. الشاشات المتوسطة الصغيرة (من 401px إلى 599px) */
+@media (min-width: 401px) and (max-width: 599px) {
+  .shamir-logo img { width: 60px; }
+    .shamir-logo h1 { font-size: 25px; }
+    .selected-group {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .selected-group .card-select {
+        width: 70px;
+        height: 110px;
+    }
+     .lantern { width: 80px; }
+    .lantern:first-child { left: 10px; }
+    .lantern:nth-child(2) { right: 10px; }
+
+    .pngtree-ramadan { width : 200px ; }
+}
+
+/* 3. الشاشات المتوسطة (من 600px فما فوق) */
+@media (min-width: 600px) {
+    .container { max-width: 800px; padding: 30px; }
+    .actions { flex-direction: row; }
+    .info-cards { grid-template-columns: repeat(2, 1fr); }
+    .selected-group { grid-template-columns: repeat(5, 1fr); }
+    .lantern { width: 110px; }
+    .lantern:first-child { left: 20px; }
+    .lantern:nth-child(2) { right: 20px; }
+    .pngtree-ramadan { width : 320px ; }
+}
+
+/* 4. شاشات التابلت (من 768px فما فوق) */
+@media (min-width: 768px) {
+    .footer-grid { grid-template-columns: 2fr 1fr; }
+    .selected-group { grid-template-columns: repeat(6, 1fr); }
+    .shamir-logo img { width: 80px; }
+    .lantern { width: 120px; }
+    .lantern:first-child { left: 50px; }
+    .lantern:nth-child(2) { right: 50px; }
+    .pngtree-ramadan { width : 370px ; }
+}
+
+/* 5. الشاشات الكبيرة (من 992px فما فوق) */
+@media (min-width: 992px) {
+    .container { max-width: 1100px; }
+    
+    .info-cards { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .info-card p { color: rgba(0,0,0,0.65); }
+    .selected-group { grid-template-columns: repeat(6, 1fr); }
+}
 
 @keyframes moveStars{
   from{ transform:translateY(0); }
@@ -359,12 +695,6 @@ input, select {
 .card-container {
   animation: pulse 0.6s ease;
 }
-
-
-
-
-
-
 
 
 

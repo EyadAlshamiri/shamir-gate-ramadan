@@ -1,152 +1,271 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صانع بطاقات التهنئة الاحترافي</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-</head>
-<body>
-    <div class="stars"></div>
-
-
-    <div class="ramadan-bg">
-  <span>☪</span>
-  <span>⭐</span>
-  <span>☪</span>
-  <span>⭐</span>
-</div>
-
-
-
-    <header class="header">
-        <div class="moon"></div>
-
-        <div>
-            <h1>بطاقات التهنئة</h1>
-            <p>أنشئ بطاقة تهنئة مميزة باسمك في ثوانٍ — احفظها أو شاركها مع أحبائك</p>
-            <br><br> 
-            <div class="shamir-logo">
-                <img src="assets/img/applogo.png" alt="Shamir Logo">
-                <h2> إدارة<span> بوابة شمير للدفع الألكتروني </span> تبارك لكم بحلول الشهر الكريم </h2>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="sec-header">
-            
-        </section>
-
-        <section class="config-section">
-            <div class="form-header">
-                <h2>أنشئ بطاقتك الخاصة</h2>
-                 <p>أدخل اسمك واختر التصميم الذي يعجبك</p>
-            </div>
-
-            <div class="input-group">
-                <label for="userName">اكتب الاسم:</label>
-                <input type="text" id="userName" placeholder="مثال: محمد أحمد" maxlength="25">
-            </div>
-
-            <label for="designSelect">اختر التصميم:</label>
-            <div class="selected-group">
-
-                <div class="card-select" data-img="assets/cards/card1.png">
-                    <img src="assets/cards/card1.png" class="cards">
-                </div>
-
-                <div class="card-select" data-img="assets/cards/card2.png">
-                    <img src="assets/cards/card2.png" class="cards">
-                </div>
-
-                <div class="card-select" data-img="assets/cards/card3.png">
-                    <img src="assets/cards/card3.png" class="cards">
-                </div>
-
-                <div class="card-select" data-img="assets/cards/card4.png">
-                    <img src="assets/cards/card4.png" class="cards">
-                </div>
-
-                <div class="card-select" data-img="assets/cards/card5.png">
-                    <img src="assets/cards/card5.png" class="cards">
-                </div>
-
-                <div class="card-select" data-img="assets/cards/card6.png">
-                    <img src="assets/cards/card6.png" class="cards">
-                </div>
-
-            </div>
-
-
-            <button id="generateBtn" class="primary-btn">إنشاء البطاقة</button>
-        </section>
-
-        <section id="previewSection" class="preview-section hidden">
-            <div id="captureArea" class="card-container">
-                <img id="cardImage" src="" alt="Greeting Card">
-                <div id=" overlayName" class="name-overlay"></div>
-            </div>
-
-            <div class="actions">
-                <button id="downloadBtn" class="secondary-btn">تحميل كصورة (PNG)</button>
-                <button id="shareBtn" class="secondary-btn share-btn">مشاركة البطاقة</button>
-            </div>
-        </section>
-    </main>
-
-
-    <footer class="footer">
-        <div class="footer-content">
-
-        </div>
-        <div class="copy-wright">
-
-        </div>
-    </footer>
-
-    <script src="js/app.js"></script>
-</body>
-</html>
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="ar">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>بطاقة تهنئة</title>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>صانع بطاقات التهنئة الاحترافي</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <link rel="stylesheet" href="css/style.css">
         <script
-            src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     </head>
     <body>
+        <div class="stars"></div>
 
-        <div class="container">
+        <!-- <div class="moon"><img src="assets/png/mon.png" alt=""></div> -->
 
-            <input id="nameInput" placeholder="اكتب اسمك">
-
-            <select id="designSelect">
-                <option value="ramadan1">تصميم 1</option>
-                <option value="ramadan2">تصميم 2</option>
-                <option value="ramadan3">تصميم 3</option>
-            </select>
-
-            <div id="card" class="card">
-                <img id="cardImage">
-                <div id="cardName"></div>
+        <header class="header">
+            <div class="shamir-logo">
+                <img src="assets/img/applogo.png" alt="Shamir Logo">
+                <h1> بوابة شمير للدفع الألكتروني </h1>
             </div>
 
-            <div class="actions">
-                <button onclick="download()">تحميل</button>
-                <button onclick="share()">مشاركة</button>
-            </div>
+            <div class="header-content">
+                <img src="assets/png/lanterns.png" alt class="lantern">
+                <img src="assets/png/lanterns.png" alt class="lantern">
 
-        </div>
+                <h2>أهلاً وسهلاً بك
+                    في بوابة شمير للدفع الإلكتروني </h3>
+
+                <p> تبارك لكم إدارة بوابة شمير للدفع الإلكتروني بحلول الشهر
+                    الكريمم</p>
+                <br><br>
+                <p>سعيدون لتواصلك معنا <i class="fa-solid fa-face-smile"></i>
+                </p>
+                <p>مع بوابة شمير أنت ألامير <i class="fa-solid fa-crown"></i>
+                </p>
+                <br><br>
+
+                <h3>بطاقات التهنئة</h3>
+                <p>أنشئ بطاقة تهنئة مميزة باسمك في ثوانٍ احفظها أو شاركها مع
+                    أحبائك</p>
+
+            </div>
+        </header>
+
+        <main class="container">
+
+            <section class="config-section">
+
+                <img src="assets/png/moon_lanterns.png"
+                    class="pngtree-ramadan">
+                <img src="assets/png/moon_lanterns.png"
+                    class="pngtree-ramadan">
+                <div class="form-header">
+
+                    <h4>أنشئ بطاقتك الخاصة</h4>
+                    <p>أدخل اسمك واختر التصميم الذي يعجبك</p>
+
+                </div>
+
+                <div class="input-group">
+                    <label for="userName">اكتب الاسم:</label>
+                    <input type="text" id="userName"
+                        placeholder="مثال: محمد أحمد" maxlength="25">
+                    <div id="nameError" class="error hidden">يرجى إدخال الاسم</div>
+                </div>
+
+                <label for="designSelect">اختر التصميم:</label>
+                <div id="designError" class="error hidden">اختر تصميمًا أولاً</div>
+                <div class="selected-group">
+
+                    <div class="card-select" data-img="assets/cards/card1.png">
+                        <img src="assets/cards/card1.png" class="cards">
+                    </div>
+
+                    <div class="card-select" data-img="assets/cards/card2.png">
+                        <img src="assets/cards/card2.png" class="cards">
+                    </div>
+
+                    <div class="card-select" data-img="assets/cards/card3.png">
+                        <img src="assets/cards/card3.png" class="cards">
+                    </div>
+
+                    <div class="card-select" data-img="assets/cards/card4.png">
+                        <img src="assets/cards/card4.png" class="cards">
+                    </div>
+
+                    <div class="card-select" data-img="assets/cards/card5.png">
+                        <img src="assets/cards/card5.png" class="cards">
+                    </div>
+
+                    <div class="card-select" data-img="assets/cards/card6.png">
+                        <img src="assets/cards/card6.png" class="cards">
+                    </div>
+
+                </div>
+
+                <button id="generateBtn" class="primary-btn">إنشاء
+                    البطاقة</button>
+            </section>
+
+            <section id="previewSection" class="preview-section hidden">
+                <div id="captureArea" class="card-container">
+                    <img id="cardImage" src alt="Greeting Card">
+                    <div id="overlayName" class="name-overlay"></div>
+                </div>
+
+                <div class="actions">
+                    <button id="downloadBtn" class="secondary-btn">تحميل كصورة
+                        (PNG) <i class="fa-solid fa-download"></i>
+                    </button>
+                    <button id="shareBtn" class="secondary-btn share-btn">مشاركة
+                        البطاقة <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- New info cards section -->
+            <section class="info-cards-section">
+                <div class="info-cards container">
+                    <div class="info-card">
+                        <img src="assets/png/pngtree-ramadan.png" alt
+                            class="pngtree ram-png-1">
+                        <div class="card-head">
+                            <i class="fa-brands fa-whatsapp"
+                                id="whats-icon"></i>
+
+                            <h3>قناة واتساب</h3>
+                        </div>
+                        <p>تابع آخر الأخبار والعروض عبر واتساب</p>
+                        <a class="card-btn "
+                            href="https://chat.whatsapp.com/REPLACE_INVITE"
+                            target="_blank" rel="noopener">فتح القناة في
+                            واتساب </a>
+                    </div>
+
+                    <div class="info-card">
+                        <img src="assets/png/pngtree-ramadan.png" alt
+                            class="pngtree ram-png-2">
+                        <h3>خدمة العملاء <i class="fa-solid fa-headset"
+                                id="client-icon"></i>
+                        </h3>
+                        <p>تواصل مع فريق الدعم عبر اتصال أو رسالة واتساب</p>
+                        <div class="btn-row">
+                            <a class="card-btn outline"
+                                href="tel:+000000000">اتصل الآن <i
+                                    class="fa-solid fa-phone"
+                                    id="call-icon"></i>
+                            </a>
+
+                            <a class="card-btn green"
+                                href="https://wa.me/000000000?text=%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85"
+                                target="_blank" rel="noopener">مراسلة واتساب <i
+                                    class="fa-brands fa-whatsapp"
+                                    id="chat-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <img src="assets/png/pngtree-ramadan.png" alt
+                            class="pngtree ram-png-3">
+                        <div class="card-head">
+                            <i class="fa-solid fa-mobile-screen-button"
+                                id="mobile-icon"></i>
+
+                            <h3>تطبيق بوابة شمير</h3>
+                        </div>
+                        <p>حمل تطبيق بوابة شمير للدفع الألكترونب لمزيد من
+                            الخدمات</p>
+                        <a class="card-btn" href="https://example.com/app"
+                            target="_blank" rel="noopener">تحميل التطبيق <i
+                                class="fa-solid fa-cloud-arrow-down "
+                                id="download-mobile-icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="info-card">
+                        <img src="assets/png/pngtree-ramadan.png" alt
+                            class="pngtree ram-png-4">
+                        <div class="card-head">
+                            <i class="fa-solid fa-globe" id="globe-icon"></i>
+
+                            <h3>موقع ألأدارة </h3>
+                        </div>
+                        <p>زر موقعنا لمتابعة كل جديد وخدماتنا</p>
+                        <a class="card-btn" href="https://example.com"
+                            target="_blank" rel="noopener">ارشدني إلى الموقع <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                                id="arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-summary">
+                    <h4>تطبيق بوابة شمير للتسديد الإلكتروني</h4>
+                    <p>
+                        تطبيق يتيح للمستخدمين تنفيذ عمليات تسديد وشحن رقمية
+                        وإدارة الأرصدة. يقدم خدمات مثل تسديد رصيد وباقات شبكات
+                        الاتصالات، تسديد خدمات الإنترنت والهاتف الثابت ويمن
+                        فورجي، تسديد فواتير الكهرباء والمياه عند التوفر، وشحن
+                        الألعاب والبطاقات والخدمات الإلكترونية.
+                        يتميّز بواجهة بسيطة وإمكانية متابعة الرصيد والعمليات مع
+                        الالتزام بخصوصية المستخدم.
+                    </p>
+                    <p class="muted">يعمل التطبيق كخدمة وسيطة لتسهيل الوصول
+                        للخدمات الرقمية ولا يتبع رسميًا أي شركة اتصالات
+                        يمنية.</p>
+                </div>
+
+                <div class="footer-legal">
+                    <h5>روابط مهمة</h5>
+                    <ul>
+                        <li><a href="https://example.com/app" target="_blank"
+                                rel="noopener">تحميل التطبيق</a></li>
+                        <li><a href="https://chat.whatsapp.com/REPLACE_INVITE"
+                                target="_blank" rel="noopener">قناة
+                                واتساب</a></li>
+                        <li><a href="https://example.com" target="_blank"
+                                rel="noopener">موقعنا</a></li>
+                    </ul>
+
+                    <br>
+                    <div class="developer-info">
+                        <h5>تطوير وبرمجة</h5>
+                        <p style="margin-bottom: 5px;"><strong>إياد فهيم
+                                الشميري</strong></p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><a href="tel:+967738928202">📞
+                                    738928202</a></li>
+                            <li><a
+                                    href="mailto:engineeriyadalshamiri@gmail.com">📧
+                                    البريد الإلكتروني</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="copyright" style="margin-top: 20px;"> <p
+                            dir="ltr"> © 2026 جميع الحقوق محفوضة - بوابة شمير
+                        </p></div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/a935c8eb65.js"
+            crossorigin="anonymous"></script>
 
         <script src="js/app.js"></script>
+        
+        <!-- Progress overlay shown while generating the card -->
+        <div id="progressOverlay" class="progress-overlay hidden">
+            <div class="progress-card">
+                <h3 id="progressTitle">جارٍ إنشاء بطاقتك...</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+                </div>
+                <div class="progress-dots">
+                    <span></span><span></span><span></span>
+                </div>
+                <p class="progress-sub" id="progressSub">يرجى الانتظار قليلاً — لن يأخذ وقتاً طويلاً</p>
+            </div>
+        </div>
     </body>
-</html> -->
+</html>
