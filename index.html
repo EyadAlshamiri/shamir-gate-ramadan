@@ -82,29 +82,31 @@
                 <div id="designError" class="error hidden">اختر تصميمًا أولاً</div>
                 <div class="selected-group">
 
-                    <div class="card-select" data-img="assets/cards/card1.png">
+                    <div class="card-select" data-img="assets/cards/card1.png" data-name-bottom="28%" data-number-bottom="22%" data-address-bottom="16%">
                         <img src="assets/cards/card1.png" class="cards">
                     </div>
 
-                    <div class="card-select" data-img="assets/cards/card2.png">
+                    <div class="card-select" data-img="assets/cards/card2.png" data-name-bottom="38%" data-number-bottom="30%" data-address-bottom="23%">
                         <img src="assets/cards/card2.png" class="cards">
                     </div>
 
-                    <div class="card-select" data-img="assets/cards/card3.png">
+                    <div class="card-select" data-img="assets/cards/card3.png" data-name-bottom="73%" data-number-bottom="65%" data-address-bottom="58%">
                         <img src="assets/cards/card3.png" class="cards">
                     </div>
 
-                    <div class="card-select" data-img="assets/cards/card4.png">
+                    <div class="card-select" data-img="assets/cards/card4.png" data-name-bottom="69%" data-number-bottom="61%" data-address-bottom="54%">
                         <img src="assets/cards/card4.png" class="cards">
                     </div>
 
-                    <div class="card-select" data-img="assets/cards/card5.png">
+                    <div class="card-select" data-img="assets/cards/card5.png" data-name-bottom="39%" data-number-bottom="28.5%" data-address-bottom="21%">
                         <img src="assets/cards/card5.png" class="cards">
                     </div>
 
-                    <div class="card-select" data-img="assets/cards/card6.png">
+                    <div class="card-select" data-img="assets/cards/card6.png" data-name-bottom="39%" data-number-bottom="29%" data-address-bottom="21%">
                         <img src="assets/cards/card6.png" class="cards">
                     </div>
+
+                   
 
                 </div>
 
@@ -115,10 +117,13 @@
             <section id="previewSection" class="preview-section hidden">
                 <div id="captureArea" class="card-container">
                     <img id="cardImage" src alt="Greeting Card">
-                    <div id="overlayAddress" class="address-overlay"></div>
-                    <div id="overlayNumber" class="number-overlay"></div>
+                    <!-- name at top, then number, then address -->
                     <div id="overlayName" class="name-overlay"></div>
+                    <div id="overlayNumber" class="number-overlay"></div>
+                    <div id="overlayAddress" class="address-overlay"></div>
                 </div>
+                <!-- details text under the preview card -->
+                <div id="previewDetails" class="preview-details"></div>
 
                 <div class="actions">
                     <button id="downloadBtn" class="secondary-btn">تحميل كصورة
@@ -144,7 +149,7 @@
                         </div>
                         <p>تابع آخر الأخبار والعروض عبر واتساب</p>
                         <a class="card-btn "
-                            href="https://chat.whatsapp.com/REPLACE_INVITE"
+                            href="https://whatsapp.com/channel/0029VbBtQOaKrWQomsmaR91D"
                             target="_blank" rel="noopener">فتح القناة في
                             واتساب </a>
                     </div>
@@ -158,13 +163,13 @@
                         <p>تواصل مع فريق الدعم عبر اتصال أو رسالة واتساب</p>
                         <div class="btn-row">
                             <a class="card-btn outline"
-                                href="tel:+000000000">اتصل الآن <i
+                                href="tel:+967780926886">اتصل الآن <i
                                     class="fa-solid fa-phone"
                                     id="call-icon"></i>
                             </a>
 
                             <a class="card-btn green"
-                                href="https://wa.me/000000000?text=%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85"
+                                href="https://wa.me/714089572?text=%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85"
                                 target="_blank" rel="noopener">مراسلة واتساب <i
                                     class="fa-brands fa-whatsapp"
                                     id="chat-icon"></i>
